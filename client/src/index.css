@@ -11,3 +11,42 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.WeatherContainer {
+  margin: auto;
+  display: flex;
+  padding: 20px;
+  width: 1200px ;
+  height: 800px;
+  border: 2px solid black;
+
+}
+
+.searchContainer {
+  margin-top: 40px;
+  width: 300px;
+  height: 700px;
+  border: 2px solid black;
+}
+
+#search {
+  margin-top: 20px;
+  width: 200px;
+}
+
+#add {
+  margin-top: 20px;
+}
+
+.cityList ul {
+  list-style: none;
+  margin-right: 300px;
+}
+
+.displayData {
+  margin: 20px ;
+  padding:10px;
+  width : 700px;
+  height: 700px;
+  border: 2px solid black;
+}

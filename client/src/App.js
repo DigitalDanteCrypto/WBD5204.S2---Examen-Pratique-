@@ -1,24 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+import SearchBar from './searchBar';
+import DisplayData from './displayData';
+import React, { useEffect, useState } from 'react';
 
 function App() {
+
+
+  const [currentCity, setCurrentCity] = useState("");
+  const [cities, setCities] = useState([]);
+
+  useEffect(() => {
+    console.log("WOUHOU", cities);
+  }, [cities])
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="WeatherContainer">
+        <div>
+          <SearchBar addCity={setCities} selectCity={setCurrentCity} cities={cities} />
+        </div>
+        <div>
+          <DisplayData cityToDisplay={currentCity} />
+        </div>
+      </div>
     </div>
+    
   );
 }
 
